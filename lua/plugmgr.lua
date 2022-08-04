@@ -56,10 +56,15 @@ return require('packer').startup(function()
 
 	use 'neovim/nvim-lspconfig'
 
+    -- Color
+  use "NvChad/nvim-colorizer.lua"
+  use "ziontee113/color-picker.nvim"
+
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
