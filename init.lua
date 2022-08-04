@@ -2,7 +2,7 @@
 vim.g.mapleader = ","
 
 -- OPTIONS
-vim.o.relativenumber = true
+require('options')
 
 -- BEGIN
 require('plugmgr')
