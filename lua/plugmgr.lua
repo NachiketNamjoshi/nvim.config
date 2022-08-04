@@ -46,26 +46,26 @@ packer.init {
 }
 
 return require('packer').startup(function()
-	-- packer
-	use 'wbthomason/packer.nvim'
+  -- packer
+  use 'wbthomason/packer.nvim'
 
-	-- colorscheme
-	use 'gruvbox-community/gruvbox'
+  -- Syntax Highlight
+  use 'nvim-treesitter/nvim-treesitter'
+  -- Language
+  use {'neoclide/coc.nvim', branch = 'release'}
 
-	use 'nvim-treesitter/nvim-treesitter'
-
-	use 'neovim/nvim-lspconfig'
-
-    -- Color
+  -- Color
   use "NvChad/nvim-colorizer.lua"
   use "ziontee113/color-picker.nvim"
+  use 'gruvbox-community/gruvbox'
 
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-	}
+  -- Status Line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
-	if PACKER_BOOTSTRAP then
-		require("packer").sync()
-	end
+  if PACKER_BOOTSTRAP then
+    require("packer").sync()
+  end
 end)
