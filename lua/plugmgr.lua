@@ -75,6 +75,12 @@ return require('packer').startup(function()
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
+  -- Notifications
+  use 'rcarriga/nvim-notify'
+
+  -- Buffers as Tabs
+  use 'romgrk/barbar.nvim'
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

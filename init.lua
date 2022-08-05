@@ -1,6 +1,9 @@
 -- GLOBALS
 vim.g.mapleader = ","
 
+-- Notifications
+vim.notify = require('notify')
+
 -- OPTIONS
 require('options')
 
