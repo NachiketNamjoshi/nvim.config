@@ -65,6 +65,13 @@ return require('packer').startup(function()
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use 'mg979/vim-visual-multi'
+  use 'tpope/vim-commentary'
 
   -- Color
   use "NvChad/nvim-colorizer.lua"

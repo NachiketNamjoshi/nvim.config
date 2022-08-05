@@ -24,8 +24,8 @@ keymap("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
 
 -- Barbar
 -- Move to previous/next
-keymap('n', '<A-b>', '<Cmd>BufferPrevious<CR>', opts)
-keymap('n', '<A-n>', '<Cmd>BufferNext<CR>', opts)
+keymap('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
+keymap('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
 -- Re-order to previous/next
 keymap('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
 keymap('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
@@ -53,7 +53,12 @@ keymap('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 --                 :BufferCloseBuffersLeft
 --                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
-keymap('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
+-- keymap('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
+
+-- Telescope
+keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', opts)
+keymap('n', '<C-b>', '<cmd>Telescope buffers<cr>', opts)
+keymap('n', '<C-f>', '<cmd>Telescope live_grep<cr>', opts)
 
 -- COC
 keymap("n", "gd", "<Plug>(coc-definition)", opts)
