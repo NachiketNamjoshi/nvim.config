@@ -31,14 +31,46 @@ keymap("n", "gd", "<Plug>(coc-definition)", opts)
 keymap("n", "gy", "<Plug>(coc-type-definition)", opts)
 keymap("n", "gi", "<Plug>(coc-implementation)", opts)
 keymap("n", "gr", "<Plug>(coc-reference)", opts)
-keymap("n", "K", "v:lua.ShowDocumentation()", opts)
+vim.keymap.set("n", "K", function()
+    if vim.fn.CocAction('hasProvider', 'hover') then
+    vim.fn.CocActionAsync('doHover')
+    return '<Nul>'
+  end
+  return 'K'
+end, opts)
 keymap("n", "<leader>rn", "<Plug>(coc-rename)", opts)
 
 -- Tab completion
-keymap("i", "<TAB>", "v:lua.TabComplete()", { silent = true, expr = true })
-keymap("i", "<S-TAB>", "v:lua.PreviousCompletionItem()", { silent = true, expr = true })
-keymap("i", "<CR>", "v:lua.SelectCompletion()", { silent = true, expr = true })
-keymap("i", "<c-space>", "v:lua.ShowCompletion()", { silent = true, expr = true })
+vim.keymap.set("i", "<TAB>", function()
+    if vim.fn['coc#pum#visible']() == 1 then
+    vim.fn['coc#pum#next'](1)
+  elseif CheckBackSpace() then
+    return '<Tab>'
+  else
+    vim.fn['coc#refresh']()
+  end
+
+end, { silent = true, expr = true })
+
+vim.keymap.set("i", "<S-TAB>", function()
+  if vim.fn['coc#pum#visible']() == 1 then
+    vim.fn['coc#pum#prev'](1)
+  else
+    return '<C-h>'
+  end
+end, { silent = true, expr = true })
+
+vim.keymap.set("i", "<CR>", function()
+  if vim.fn["coc#pum#visible"]() == 1 then
+    vim.fn['coc#pum#confirm']()
+  else
+    return '<CR>'
+  end
+end, { silent = true, expr = true })
+
+vim.keymap.set("i", "<c-space>", function()
+  vim.fn['coc#refresh']()
+end, { silent = true, expr = true })
 
 --------------
 -- Autocmds --
@@ -58,52 +90,10 @@ vim.api.nvim_create_autocmd(
 --Service Functions --
 ----------------------
 
-function _G.PreviousCompletionItem()
-  if vim.fn['coc#pum#visible']() then
-    vim.fn['coc#pum#prev'](1)
-  else
-    vim.cmd[[
-      "\<C-h>"
-    ]]
-  end
-end
-
-function _G.ShowCompletion()
-  vim.fn['coc#refresh']()
-end
-
-function _G.SelectCompletion()
-  if vim.fn['coc#pum#visible']() then
-    vim.fn['coc#pum#confirm']()
-  else
-    vim.cmd[[
-      "<C-g>u<CR><c-r>=coc#on_enter()<CR>"
-    ]]
-  end
-end
-
-function _G.TabComplete()
-  if vim.fn['coc#pum#visible']() then
-    vim.fn['coc#pum#next'](1)
-  elseif CheckBackSpace() then
-    vim.cmd[[\<Tab>]]
-  else
-    vim.fn['coc#refresh']()
-  end
-end
-
-function _G.CheckBackSpace()
+function CheckBackSpace()
   return vim.cmd[[
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
   ]]
-end
-
-function _G.ShowDocumentation()
-  if vim.fn.CocAction('hasProvider', 'hover') then
-    vim.fn.CocActionAsync('doHover')
-  else
-    vim.fn.feedkeys('K', 'in')
-  end
 end
 
