@@ -5,7 +5,7 @@ end
 
 treesitter.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { 
+  ensure_installed = {
 	  "c",
 	  "lua",
 	  "rust",
@@ -55,5 +55,27 @@ treesitter.setup {
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+  },
+  refactor = {
+    highlight_definitions = {
+      enable = true,
+      clear_on_cursor_move = true
+    },
+    smart_rename = {
+      enable = true,
+      keymaps = {
+        smart_rename = "<leader>r",
+      },
+    },
+    navigation = {
+      enable = true,
+      keymaps = {
+        list_definitions_toc = "gO"
+      }
+    },
   },
 }

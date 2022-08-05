@@ -51,6 +51,8 @@ return require('packer').startup(function()
 
   -- Syntax Highlight
   use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter-refactor'
+  use 'p00f/nvim-ts-rainbow'
 
   -- Language
   use {'neoclide/coc.nvim', branch = 'release'}

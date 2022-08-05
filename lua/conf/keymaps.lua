@@ -67,7 +67,6 @@ vim.keymap.set("n", "K", function()
   end
   return 'K'
 end, opts)
-keymap("n", "<leader>rn", "<Plug>(coc-rename)", opts)
 
 -- Tab completion
 vim.keymap.set("i", "<TAB>", function()
