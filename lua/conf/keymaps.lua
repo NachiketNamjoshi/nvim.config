@@ -74,7 +74,7 @@ vim.keymap.set("i", "<TAB>", function()
     if vim.fn['coc#pum#visible']() == 1 then
     vim.fn['coc#pum#next'](1)
   elseif CheckBackSpace() then
-    return '<Tab>'
+    return '<TAB>'
   else
     vim.fn['coc#refresh']()
   end
@@ -120,9 +120,19 @@ vim.api.nvim_create_autocmd(
 ----------------------
 
 function CheckBackSpace()
-  return vim.cmd[[
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-  ]]
+  local col = vim.fn.col('.') - 1
+  if col == 0 then
+    local gline = vim.fn.getline('.')[col - 1]
+    if gline == nil then
+      return true
+    end
+    return string.match(gline, '%w*%s*')
+  end
+  return true
+
+--  return vim.cmd[[
+--    let col = col('.') - 1
+--    !col || getline('.')[col - 1]  =~# '\s'
+--  ]]
 end
 
