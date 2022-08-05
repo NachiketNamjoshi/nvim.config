@@ -51,8 +51,18 @@ return require('packer').startup(function()
 
   -- Syntax Highlight
   use 'nvim-treesitter/nvim-treesitter'
+
   -- Language
   use {'neoclide/coc.nvim', branch = 'release'}
+
+  -- Navigation
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
 
   -- Color
   use "NvChad/nvim-colorizer.lua"

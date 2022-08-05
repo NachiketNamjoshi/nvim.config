@@ -6,3 +6,4 @@ require('options')
 
 -- BEGIN
 require('plugmgr')
+require('conf.keymaps')
