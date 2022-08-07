@@ -56,6 +56,7 @@ return require('packer').startup(function()
 
   -- Language
   use {'neoclide/coc.nvim', branch = 'release'}
+  use 'lervag/vimtex'
 
   -- Navigation
   use {
