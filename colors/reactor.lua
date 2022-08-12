@@ -1,5 +1,3 @@
-require[[reactor]]
-
 local reactor_ok, reactor = pcall(require, 'reactor')
 if not reactor_ok then
   return
