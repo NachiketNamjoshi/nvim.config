@@ -78,6 +78,7 @@ return require('packer').startup(function()
   use "NvChad/nvim-colorizer.lua"
   use "ziontee113/color-picker.nvim"
   use 'gruvbox-community/gruvbox'
+  use { 'NachiketNamjoshi/reactor.nvim', run = './install.sh' }
 
   -- Status Line
   use {

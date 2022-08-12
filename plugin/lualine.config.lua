@@ -15,13 +15,16 @@ local lualine_opts = {
   component_separators = { left = '', right = '' },
 }
 
-local reactor_ok, reactor = pcall(require, 'colors.reactor')
+local reactor_ok, reactor = pcall(require, 'reactor_lualine')
 if reactor_ok then
   vim.notify("Loading Reactor Lualine Theme", vim.log.levels.INFO, {
     title = "reactor colorscheme"
   })
   lualine_opts['theme'] = reactor.LualineTheme;
 else
+  vim.notify("Cannot Load Reactor Lualine Theme", vim.log.levels.ERROR, {
+    title = "reactor colorscheme"
+  })
   lualine_opts['theme'] = 'gruvbox'
 end
 
