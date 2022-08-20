@@ -53,6 +53,7 @@ return require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-treesitter/nvim-treesitter-refactor'
   use 'p00f/nvim-ts-rainbow'
+  use 'mboughaba/i3config.vim'
 
   -- Language
   use {'neoclide/coc.nvim', branch = 'release'}
