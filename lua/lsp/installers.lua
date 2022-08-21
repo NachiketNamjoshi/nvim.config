@@ -3,14 +3,25 @@ if not mason_ok then
   return
 end
 
-mason.setup()
+mason.setup({
+  ui = {
+    icons = {
+      package_installed = "",
+      package_pending = "",
+      package_uninstalled = ""
+    }
+  }
+})
 
-local lsp_ok, lsp_installer = pcall(require, 'mason-lspconfig')
-if not lsp_ok then
+local mason_lsp_ok, lsp_installer = pcall(require, 'mason-lspconfig')
+if not mason_lsp_ok then
   return
 end
 
 local lsp_ok, lspconfig = pcall(require, 'lspconfig')
+if not lsp_ok then
+  return
+end
 
 local servers = {
   'jsonls',
