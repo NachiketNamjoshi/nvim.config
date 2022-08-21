@@ -87,3 +87,4 @@ The leader has been set to `,`
 - `[d`: Go to previous diagnostics
 - `]d`: Go to next diagnostics
 - `gl`: Open diagnostics in floating window
+- `<leader>r`: Rename symbol under cursor

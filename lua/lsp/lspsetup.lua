@@ -44,6 +44,9 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
   -- Open Diagnostics details
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+
+  -- Rename symbol
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>r", '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 end
 
 ----------------------
