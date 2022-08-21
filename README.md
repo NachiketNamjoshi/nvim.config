@@ -72,6 +72,18 @@ The leader has been set to `,`
 - `Ctrl + p`: Telescope Find Files
 - `Ctrl + b`: Telescope Find Buffers
 - `Ctrl + f`: Telescope Find in files (Fuzzy text search)
+- `Ctrl + d`: Telescope Find in diagnostics
 
 #### Multi-line / Multi-cursor
 - Defaults from: [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi)
+
+#### Code Navigation / Completion (LSP)
+- `gD`: Go to Declaration
+- `gd`: Go to Definition
+- `K`: Trigger Hover Manually (Show Documentation)
+- `gi`: Go to Implementations
+- `Ctrl + g`: Show signature help
+- `gr`: Go to / Show references
+- `[d`: Go to previous diagnostics
+- `]d`: Go to next diagnostics
+- `gl`: Open diagnostics in floating window
