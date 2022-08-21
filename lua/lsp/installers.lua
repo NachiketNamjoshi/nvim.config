@@ -22,6 +22,12 @@ local servers = {
   'html',
   'pyright',
   'rust_analyzer',
+  'tsserver',
+  'clangd',
+  'gopls',
+  'phpactor',
+  'sqlls',
+  'yamlls',
 }
 
 local server_mapping = {
@@ -34,6 +40,12 @@ local server_mapping = {
   'html-lsp',
   'pyright',
   'rust-analyzer',
+  'typescript-language-server',
+  'clangd',
+  'gopls',
+  'phpactor',
+  'sqlls',
+  'yaml-language-server',
 }
 
 lsp_installer.setup({
