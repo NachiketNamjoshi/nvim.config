@@ -12,12 +12,10 @@ keymap("n", "<c-k>", "<C-w>k", opts)
 keymap("n", "<c-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
-
-keymap("n", "Q", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<A-Up>", ":resize +2<CR>", opts)
+keymap("n", "<A-Down>", ":resize -2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
 -- Nvim Tree
 keymap("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
