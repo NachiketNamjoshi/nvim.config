@@ -47,6 +47,9 @@ local function lsp_keymaps(bufnr)
 
   -- Rename symbol
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>r", '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+
+  -- Code Actions
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>a", '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 end
 
 ----------------------
