@@ -39,6 +39,7 @@ local servers = {
   'phpactor',
   'sqlls',
   'yamlls',
+  'texlab',
 }
 
 local server_mapping = {
@@ -57,6 +58,7 @@ local server_mapping = {
   'phpactor',
   'sqlls',
   'yaml-language-server',
+  'texlab',
 }
 
 lsp_installer.setup({
