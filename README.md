@@ -12,15 +12,17 @@
   git clone git@github.com:NachiketNamjoshi/nvim.config.git ~/.config/nvim
   ```
 
-3. Install all plugins before actually using nvim
+3. Install Rust using Rustup if you don't already have it installed: https://rustup.rs/
+
+4. Install all plugins before actually using nvim
   
   ```bash
   nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync"
   ```
 
-4. Launch `nvim`
+5. Launch `nvim`
 
-5. *(Optional)* Run `:Mason` as it will install all the Language Servers
+6. *(Optional)* Run `:Mason` as it will install all the Language Servers
 
 ## Language Servers
 
