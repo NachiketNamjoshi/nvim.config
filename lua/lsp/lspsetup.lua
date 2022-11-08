@@ -7,7 +7,7 @@ local MODULE = {}
 local lsp_cmp_ok, lsp_cmp = pcall(require, 'cmp_nvim_lsp')
 if lsp_cmp_ok then
   local ls_capabilities = vim.lsp.protocol.make_client_capabilities()
-  MODULE.capabilities = lsp_cmp.update_capabilities(ls_capabilities)
+  MODULE.capabilities = lsp_cmp.default_capabilities(ls_capabilities)
 end
 
 ------------------------
