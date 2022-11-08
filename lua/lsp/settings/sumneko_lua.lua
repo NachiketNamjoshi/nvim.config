@@ -1,4 +1,4 @@
-local luadev_ok, luadev = pcall(require, 'lua-dev')
+local luadev_ok, luadev = pcall(require, 'neodev')
 if not luadev_ok then
   return {
 	  settings = {
