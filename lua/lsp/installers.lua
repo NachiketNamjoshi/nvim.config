@@ -42,27 +42,8 @@ local servers = {
   'texlab',
 }
 
-local server_mapping = {
-  'json-lsp',
-  'lua-language-server',
-  'bash-language-server',
-  'vim-language-server',
-  'dockerfile-language-server',
-  'css-lsp',
-  'html-lsp',
-  'pyright',
-  'rust-analyzer',
-  'typescript-language-server',
-  'clangd',
-  'gopls',
-  'phpactor',
-  'sqlls',
-  'yaml-language-server',
-  'texlab',
-}
-
 lsp_installer.setup({
-	ensure_installed = server_mapping,
+	ensure_installed = servers,
   automatic_installation = true,
 })
 
