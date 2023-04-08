@@ -25,7 +25,7 @@ end
 
 local servers = {
   'jsonls',
-  'sumneko_lua',
+  'lua_ls',
   'bashls',
   'vimls',
   'dockerls',
