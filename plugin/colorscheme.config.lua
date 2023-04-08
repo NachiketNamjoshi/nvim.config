@@ -1,4 +1,4 @@
--- vim.cmd[[colorscheme gruvbox]]
-vim.cmd("colorscheme reactor")
+vim.cmd[[colorscheme gruvbox]]
+-- vim.cmd("colorscheme reactor")
 
 
