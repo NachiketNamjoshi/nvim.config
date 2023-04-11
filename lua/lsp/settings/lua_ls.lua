@@ -1,6 +1,14 @@
 local neodev_ok, neodev = pcall(require, 'neodev')
 if neodev_ok then
-  neodev.setup({})
+  neodev.setup({
+    library = {
+      enabled = true,
+      runtime = true,
+      plugins = true,
+      types = true,
+    },
+    setup_jsonls = true,
+  })
   return {
     settings = {
       Lua = {
@@ -11,7 +19,6 @@ if neodev_ok then
     }
   }
 end
-
 
 return {
 	settings = {
