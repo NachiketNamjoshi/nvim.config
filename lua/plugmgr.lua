@@ -45,7 +45,7 @@ packer.init {
   },
 }
 
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   -- packer
   use 'wbthomason/packer.nvim'
 
