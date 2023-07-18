@@ -38,7 +38,7 @@ local options = {
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   title = true,
   colorcolumn = "120",
-
+  background = "dark",
 }
 
 vim.opt.fillchars = vim.opt.fillchars + 'eob: '
