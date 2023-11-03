@@ -104,6 +104,8 @@ return require('packer').startup(function(use)
   -- Buffers as Tabs
   use 'romgrk/barbar.nvim'
 
+  use 'folke/which-key.nvim'
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
