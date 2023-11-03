@@ -1,5 +1,6 @@
 -- GLOBALS
 vim.g.mapleader = ","
+vim.loader.enable()
 
 -- BEGIN
 require('plugmgr')
