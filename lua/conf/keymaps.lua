@@ -58,3 +58,19 @@ keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', opts)
 keymap('n', '<C-b>', '<cmd>Telescope buffers<cr>', opts)
 keymap('n', '<C-f>', '<cmd>Telescope live_grep<cr>', opts)
 keymap('n', '<C-d>', '<cmd>Telescope diagnostics<cr>', opts)
+
+--
+-- Code life ---------
+--
+
+-- Indenting
+keymap('v', '<', '<gv', opts)
+keymap('v', '>', '>gv', opts)
+
+-- Move text up and down
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+keymap("x", "J", ":m '>+1<CR>gv=gv", opts) -- x = Visual Block
+keymap("x", "K", ":m '<-2<CR>gv=gv", opts)
+keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
