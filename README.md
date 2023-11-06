@@ -17,7 +17,7 @@
 4. Install all plugins before actually using nvim
   
   ```bash
-  nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync"
+  nvim --headless "+Lazy! sync" +qa
   ```
 
 5. Launch `nvim`
