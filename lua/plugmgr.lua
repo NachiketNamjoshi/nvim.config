@@ -20,66 +20,7 @@ if not status_ok then
   return
 end
 
-return lazy.setup({
-  -- Syntax Highlight
-  'nvim-treesitter/nvim-treesitter',
-  'nvim-treesitter/nvim-treesitter-refactor',
-  'p00f/nvim-ts-rainbow',
-  'mboughaba/i3config.vim',
-
-  -- Language
-  'neovim/nvim-lspconfig',
-  'williamboman/mason.nvim',
-  'williamboman/mason-lspconfig.nvim',
-  'hrsh7th/nvim-cmp',
-  'hrsh7th/cmp-buffer',
-  'hrsh7th/cmp-path',
-  'hrsh7th/cmp-cmdline',
-  'hrsh7th/cmp-nvim-lsp',
-  'L3MON4D3/LuaSnip',
-  'folke/lua-dev.nvim',
-  'lervag/vimtex',
-
-  -- Navigation
-  {
-    'kyazdani42/nvim-tree.lua',
-    dependencies = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  },
-  {
-    'nvim-telescope/telescope.nvim', tag = '0.1.4',
-    -- or                            , branch = '0.1.x',
-    dependencies = { {'nvim-lua/plenary.nvim'} }
-  },
-  'mg979/vim-visual-multi',
-  'tpope/vim-commentary',
-
-  -- Color
-  "NvChad/nvim-colorizer.lua",
-  "ziontee113/color-picker.nvim",
-  'gruvbox-community/gruvbox',
-  { 'NachiketNamjoshi/reactor.nvim', build = './install.sh' },
-
-  -- Status Line
-  {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'kyazdani42/nvim-web-devicons', opt = true }
-  },
-
-  -- Notifications
-  'rcarriga/nvim-notify',
-
-  -- Buffers as Tabs
-  'romgrk/barbar.nvim',
-
-  'folke/which-key.nvim',
-  {
-      'goolord/alpha-nvim',
-      dependencies = { 'kyazdani42/nvim-web-devicons' },
-  },
-}, {
+return lazy.setup('plugins', {
   root = vim.fn.stdpath("data") .. "/lazy", -- directory where plugins will be installed
   defaults = {
     lazy = true, -- should plugins be lazy-loaded?
