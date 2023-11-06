@@ -2,7 +2,7 @@
 return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'kyazdani42/nvim-web-devicons', opt = true },
-	config = {
+	opts = {
 		icons_enabled = true,
 		always_divide_middle = true,
 		refresh = {

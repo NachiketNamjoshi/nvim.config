@@ -1,6 +1,6 @@
 return {
   'NvChad/nvim-colorizer.lua',
-  config = {
+  opts = {
     RGB = true, -- #RGB hex codes
     RRGGBB = true, -- #RRGGBB hex codes
     names = false, -- "Name" codes like Blue oe blue

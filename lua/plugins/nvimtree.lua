@@ -4,7 +4,11 @@ return {
       'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
     tag = 'nightly', -- optional, updated every week. (see issue #1193)
-    lazy = false,
+    cmd = {
+      'NvimTreeOpen',
+      'NvimTreeClose',
+      'NvimTreeToggle',
+    },
     config = function()
       local status_ok, nvim_tree = pcall(require, "nvim-tree")
       if not status_ok then
