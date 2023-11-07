@@ -7,7 +7,10 @@ return {
 
   -- Navigation
   'mg979/vim-visual-multi',
-  'tpope/vim-commentary',
+  {
+    'tpope/vim-commentary',
+    lazy = false
+  },
 
   -- Color
   "ziontee113/color-picker.nvim",
