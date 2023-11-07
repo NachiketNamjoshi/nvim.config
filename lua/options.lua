@@ -66,5 +66,8 @@ vim.filetype.add {
 
 ---- Plugin Opts
 vim.g.vimtex_view_method = "zathura"
+-- NvimTree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 -- vim.g.vimtex_compiler_method = "latexrun"
 vim.cmd[[colorscheme gruvbox]]
