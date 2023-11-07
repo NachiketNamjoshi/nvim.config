@@ -21,6 +21,7 @@ return {
             enable = true,
           },
           icons = {
+            git_placement = 'after',
             glyphs = {
               default = "",
               symlink = "",

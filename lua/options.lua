@@ -39,7 +39,8 @@ local options = {
   title = true,
   colorcolumn = "120",
   background = "dark",
-  timeout = true,                             -- unset timeout. vim shall wait forever for you to either type the complete mapping or type something which doesn't match any of your mappings.
+  timeout = true,                          -- unset timeout. vim shall wait forever for you to either type the complete mapping or type something which doesn't match any of your mappings.
+  autochdir = true,                        -- cd automatically to folder root when a path is specified.
 }
 
 vim.opt.fillchars = vim.opt.fillchars + 'eob: '
