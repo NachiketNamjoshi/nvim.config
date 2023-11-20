@@ -19,7 +19,7 @@ local options = {
   termguicolors = true,                    -- set term gui colors (most terminals support this)
   timeoutlen = 1000,                       -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                         -- enable persistent undo
-  updatetime = 100,                       -- faster completion (4000ms default)
+  updatetime = 100,                        -- faster completion (4000ms default)
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
   expandtab = true,                        -- convert tabs to spaces
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
@@ -29,7 +29,7 @@ local options = {
   laststatus = 3,
   showcmd = false,
   ruler = false,
-  relativenumber = false,                   -- set relative numbered lines
+  relativenumber = false,                  -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = false,                            -- display lines as one long line
@@ -40,7 +40,7 @@ local options = {
   colorcolumn = "120",
   background = "dark",
   timeout = true,                          -- unset timeout. vim shall wait forever for you to either type the complete mapping or type something which doesn't match any of your mappings.
-  autochdir = true,                        -- cd automatically to folder root when a path is specified.
+  autochdir = false,                       -- cd automatically to basename(file).
 }
 
 vim.opt.fillchars = vim.opt.fillchars + 'eob: '
