@@ -19,6 +19,7 @@ return {
   "ziontee113/color-picker.nvim",
   'gruvbox-community/gruvbox',
   { 'NachiketNamjoshi/reactor.nvim', build = './install.sh' },
+  'fenetikm/falcon',
   -- Better inputs
   {
     'stevearc/dressing.nvim',
