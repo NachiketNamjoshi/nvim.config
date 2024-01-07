@@ -13,5 +13,6 @@ return {
     -- Available modes: foreground, background, virtualtext
     mode = "virtualtext", -- Set the display mode.)
   },
+  lazy = false,
 }
 

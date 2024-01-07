@@ -16,10 +16,12 @@ return {
   },
 
   -- Color
-  "ziontee113/color-picker.nvim",
+  {
+    "ziontee113/color-picker.nvim",
+    lazy = false,
+  },
   'gruvbox-community/gruvbox',
   { 'NachiketNamjoshi/reactor.nvim', build = './install.sh' },
-  'fenetikm/falcon',
   -- Better inputs
   {
     'stevearc/dressing.nvim',
