@@ -70,7 +70,6 @@ vim.g.vimtex_view_method = "zathura"
 -- NvimTree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.gruvbox_contrast_dark = "hard"
 -- vim.g.vimtex_compiler_method = "latexrun"
-vim.cmd[[colorscheme falcon]]
-vim.g.falcon_background = 0
-vim.g.falcon_inactive = 1
+vim.cmd[[colorscheme gruvbox]]
